@@ -32,7 +32,8 @@ jobs:
           sed -i 's/<TOKEN>/${{ secrets.GITHUB_TOKEN }}/' .yarnrc.yml
 
       - name: Install Dependencies
-        run: yarn --frozen-lockfile
+        #run: yarn --frozen-lockfile
+        run: yarn
 
       - name: Build
         run: yarn build
